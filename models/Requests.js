@@ -4,7 +4,7 @@ const Requests = (sequelize, DataTypes) => {
       employeeName: DataTypes.STRING,
       customerName: DataTypes.STRING,
       productName: DataTypes.STRING,
-      amount: DataTypes.INTEGER,
+      amount: DataTypes.FLOAT,
       status: DataTypes.STRING,
     });
   };
