@@ -10,18 +10,38 @@ module.exports = {
         autoIncrement: true,
         allowNull: false,
       },
-      name: {
+      customerName: {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      /*unitaryValue: {
+      email: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+      cpf: {
         type: Sequelize.INTEGER,
         allowNull: false,
       },
-      qtyStock: {
+      city: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+      district: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+      road: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+      residentialNumber: {
         type: Sequelize.INTEGER,
         allowNull: false,
-      },*/
+      },
+      cell: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+      },
       createdAt: {
         type: Sequelize.DATE,
         allowNull: false,
@@ -32,6 +52,7 @@ module.exports = {
       },
     });
   },
+
 
   down: async (queryInterface, Sequelize) => {
     return queryInterface.dropTable('Customers');
