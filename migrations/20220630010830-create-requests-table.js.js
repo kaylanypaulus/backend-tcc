@@ -30,14 +30,10 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      /*unitaryValue: {
-        type: Sequelize.INTEGER,
+      status: {
+        type: Sequelize.STRING,
         allowNull: false,
       },
-      qtyStock: {
-        type: Sequelize.INTEGER,
-        allowNull: false,
-      },*/
       createdAt: {
         type: Sequelize.DATE,
         allowNull: false,
