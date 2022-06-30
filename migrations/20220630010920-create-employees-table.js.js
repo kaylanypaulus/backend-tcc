@@ -2,7 +2,7 @@
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    return queryInterface.createTable('Customers', {
+    return queryInterface.createTable('Employees', {
       // nome de tabela é no PLURAL
       id: {
         type: Sequelize.INTEGER,
@@ -10,18 +10,42 @@ module.exports = {
         autoIncrement: true,
         allowNull: false,
       },
-      name: {
+      employeeName: {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      /*unitaryValue: {
+      email: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+      office: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+      city: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+      district: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+      road: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+      residentialNumber: {
         type: Sequelize.INTEGER,
         allowNull: false,
       },
-      qtyStock: {
+      cell: {
         type: Sequelize.INTEGER,
         allowNull: false,
-      },*/
+      },
+      admissionDate: {
+        type: Sequelize.DATE,
+        allowNull: false,
+      },
       createdAt: {
         type: Sequelize.DATE,
         allowNull: false,
@@ -34,6 +58,6 @@ module.exports = {
   },
 
   down: async (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('Customers');
+    return queryInterface.dropTable('Employees');
   },
 };
